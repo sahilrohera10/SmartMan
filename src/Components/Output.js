@@ -8,10 +8,6 @@ import "prismjs/themes/prism-okaidia.css"; // Theme
 // import "prismjs/themes/prism-coy.css";
 
 export default function Output({ resp }) {
-  // if (resp) {
-  // // resp = resp.text();
-  // document.getElementById("language-javascript").innerHTML = resp;
-  // }
   useEffect(() => {
     Prism.highlightAll();
   }, []);
@@ -19,22 +15,27 @@ export default function Output({ resp }) {
     <div>
       <div
         style={{
-          border: "1px solid black",
-          width: "60vw",
+          border: "1px solid white",
+          width: "85vw",
           height: "auto",
           margin: "auto",
-          marginTop: "70px",
+          marginTop: "150px",
           overflow: "auto",
         }}
       >
-        <p style={{ textAlign: "left", marginLeft: "20px", margin: "6px" }}>
+        <p
+          style={{
+            textAlign: "left",
+            marginLeft: "20px",
+            margin: "6px",
+            color: "white",
+          }}
+        >
           console
         </p>
-        <Divider />
+        {/* <Divider /> */}
         <div id="output">
-          <pre
-            style={{ overflow: "auto", maxHeight: "50vh", minHeight: "20vh" }}
-          >
+          <pre style={{ overflow: "auto", height: "35vh" }}>
             <code className="language-javascript">{resp}</code>
           </pre>
         </div>
